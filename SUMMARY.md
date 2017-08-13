@@ -9,4 +9,5 @@
 * [nodejs](nodejs.md)
 * [git](git.md)
 * [iterm2](iterm2.md)
+* [oh\_my\_zsh](ohmy-zsh.md)
 
