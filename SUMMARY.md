@@ -6,7 +6,7 @@
 * mongo
 * mysql
 * redis
-* nodejs
-* git
-* iterm2
+* [nodejs](nodejs.md)
+* [git](git.md)
+* [iterm2](iterm2.md)
 
