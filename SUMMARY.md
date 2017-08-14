@@ -1,11 +1,11 @@
 # Summary
 
 * [Introduction](README.md)
-* [ssh\_shell](sshshell.md)
 * [homebrew](homebrew.md)
-* mongo
-* mysql
-* redis
+* [ssh\_shell](sshshell.md)
+* [mongo](mongo.md)
+* [mysql](mysql.md)
+* [redis](redis.md)
 * [nodejs](nodejs.md)
 * [git](git.md)
 * [iterm2](iterm2.md)
