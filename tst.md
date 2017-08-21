@@ -1014,6 +1014,57 @@ AJAX,Asynchronous JavaScript and XML（异步的 JavaScript 和 XML）, 是与�
 7. 信号量（semaphore）：主要作为进程间以及同一进程不同线程之间的同步手段。
 8. 套接口（Socket）：更为一般的进程间通信机制，可用于不同机器之间的进程间通信。起初是由Unix系统的BSD分支开发出来的，但现在一般可以移植到其它类Unix系统上：Linux和System V的变种都支持套接字。
 
+# 数据结构
+
+## 1 红黑树
+
+红黑树与AVL的比较：
+
+AVL是严格平衡树，因此在增加或者删除节点的时候，根据不同情况，旋转的次数比红黑树要多；
+
+红黑是用非严格的平衡来换取增删节点时候旋转次数的降低；
+
+所以简单说，如果你的应用中，搜索的次数远远大于插入和删除，那么选择AVL，如果搜索，插入删除次数几乎差不多，应该选择RB。
+
+# 编程题
+
+## 1 台阶问题/斐波纳挈
+
+一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。
+
+```python
+fib = lambda n: n if n <= 2 else fib(n - 1) + fib(n - 2)
+```
+
+第二种记忆方法
+
+```python
+def memo(func):
+    cache = {}
+    def wrap(*args):
+        if args not in cache:
+            cache[args] = func(*args)
+        return cache[args]
+    return wrap
+
+
+@memo
+def fib(i):
+    if i < 2:
+        return 1
+    return fib(i-1) + fib(i-2)
+```
+
+第三种方法
+
+```python
+def fib(n):
+    a, b = 0, 1
+    for _ in xrange(n):
+        a, b = b, a + b
+    return b
+```
+
 
 
 
